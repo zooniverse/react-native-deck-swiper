@@ -62,6 +62,8 @@ npm install react-native-deck-swiper --save
 | disableLeftSwipe | bool | disable left swipe | false |
 | disableRightSwipe | bool | disable right swipe | false |
 | disableTopSwipe | bool | disable top swipe | false |
+| panXListener | func | function that passes the pan object that follows the x of the pan
+| panYListener | func | function that passes the pan object that follows the y of the pan
 
 ### Zoom animation props
 

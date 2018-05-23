@@ -60,7 +60,10 @@ class Swiper extends Component {
     this._animatedValueY = 0
 
     this.state.pan.x.addListener(value => (this._animatedValueX = value.value))
+    this.props.panXListener(this.state.pan.x)
+
     this.state.pan.y.addListener(value => (this._animatedValueY = value.value))
+    this.props.panYListener(this.state.pan.y)
 
     this.initializeCardStyle()
     this.initializePanResponder()
@@ -794,6 +797,8 @@ Swiper.propTypes = {
   overlayOpacityVerticalThreshold: PropTypes.number,
   previousCardInitialPositionX: PropTypes.number,
   previousCardInitialPositionY: PropTypes.number,
+  panXListener: PropTypes.func,
+  panYListener: PropTypes.func,
   renderCard: PropTypes.func.isRequired,
   secondCardZoom: PropTypes.number,
   showSecondCard: PropTypes.bool,
@@ -895,6 +900,8 @@ Swiper.defaultProps = {
   overlayOpacityVerticalThreshold: height / 5,
   previousCardInitialPositionX: 0,
   previousCardInitialPositionY: -height,
+  panXListener: () => {},
+  panYListener: () => {},
   secondCardZoom: 0.97,
   showSecondCard: true,
   swipeAnimationDuration: 350,
