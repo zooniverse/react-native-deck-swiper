@@ -105,7 +105,7 @@ class Swiper extends Component {
         const isVerticalSwipe = Math.sqrt(
           Math.pow(gestureState.dx, 2) < Math.pow(gestureState.dy, 2)
         )
-        if (!this.props.verticalSwipe && isVerticalSwipe) {
+        if ((!this.props.verticalSwipe || !this.props.verticalInitiation) && isVerticalSwipe) {
           return false
         }
         return Math.sqrt(Math.pow(gestureState.dx, 2) + Math.pow(gestureState.dy, 2)) > 10
@@ -807,6 +807,7 @@ Swiper.propTypes = {
   swipeBackCard: PropTypes.bool,
   swipeBackFriction: PropTypes.number,
   verticalSwipe: PropTypes.bool,
+  verticalInitiation: PropTypes.bool,
   verticalThreshold: PropTypes.number,
   zoomAnimationDuration: PropTypes.number,
   zoomFriction: PropTypes.number,
@@ -908,6 +909,7 @@ Swiper.defaultProps = {
   swipeBackAnimationDuration: 600,
   swipeBackCard: false,
   swipeBackFriction: 11,
+  verticalInitiation: true,
   verticalSwipe: true,
   verticalThreshold: height / 5,
   zoomAnimationDuration: 100,
