@@ -98,9 +98,8 @@ class Swiper extends Component {
 
   initializePanResponder = () => {
     this._panResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (event, gestureState) => true,
+      onStartShouldSetPanResponder: (event, gestureState) => false,
       onMoveShouldSetPanResponder: (event, gestureState) => false,
-
       onMoveShouldSetPanResponderCapture: (evt, gestureState) => {
         const isVerticalSwipe = Math.sqrt(
           Math.pow(gestureState.dx, 2) < Math.pow(gestureState.dy, 2)
