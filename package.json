@@ -33,8 +33,7 @@
     "homepage": "https://github.com/alexbrillant/react-native-deck-swiper#readme",
     "dependencies": {
         "prop-types": "15.5.10",
-        "react": "^16.6.3",
-        "react-native": "^0.57.8"
+        "react": "^16.6.3"
     },
     "devDependencies": {
         "babel-eslint": "^7.2.3",
