@@ -1,3 +1,5 @@
+# Zooniversians: as of Jan 13, 2021, the three most recent versions of this library all still cause our app to not display cards and crash on a swipe attempt, as did the most recent version in June of 2019. This fork fixes it. Two other projects have proposed this fix to the maintainers. So far, it has not been merged in.
+
 ## react-native-deck-swiper
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 [![npm version](https://badge.fury.io/js/react-native-deck-swiper.svg)](https://badge.fury.io/js/react-native-deck-swiper)
